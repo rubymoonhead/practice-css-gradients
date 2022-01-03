@@ -72,7 +72,9 @@ div {
 /* horizontal rule */
 hr {
 	margin: 2em 0 2em;
+	border: none;
 	border-top: 0.25em double var(--charcoal);
+	color: var(--charcoal);
 	overflow: visible; /*makes the section symbol fully visible*/
 	text-align: center;
 	height: 0.25em; /*to make hr block height same as border-top height*/
