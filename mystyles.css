@@ -1,82 +1,203 @@
-/* LINEAR */
+/* MY TEMPLATE */
+* {
+	/* Outline to view layout on screen while styling | Remove after styling */
+	/* outline: 0.0625em dashed #ff0075; */
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+/* declaring variables for colors */
+/* pride flag colors */
+:root {
+	--red: #d12229;
+	--orange: #f68a1e;
+	--yellow: #fde01a;
+	--green: #007940;
+	--indigo: #24408e;
+	--violet: #732982;
+	--gray: #808080;
+	--charcoal: #333;
+	--white: #fff;
+  --offwhite: #FAF9F6;
+}
+
+/* basic styles */
+
+body {
+  background: var(--offwhite);
+	padding: 3em;
+	font-family: "Roboto Mono", monospace;
+	max-width: 70%;
+	margin: 0 auto;
+}
+h1 {
+	text-align: left;
+	margin-bottom: 1em;
+	padding: 0.25em;
+}
+h2 {
+	text-align: center;
+	margin-bottom: 1em;
+	padding: 0.5em;
+}
+section {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+div {
+	padding: 1em;
+	align-items: center;
+	border: 0.01em dashed var(--gray);
+	display: flex;
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: var(--white);
+	justify-content: center;
+	height: 8em;
+  box-shadow: 0.125em 0.125em 0.125em rgba(42, 39, 39, 0.4);
+}
+/* horizontal rule */
+hr {
+	margin: 2em 0 2em;
+	border-top: 0.25em double var(--charcoal);
+	overflow: visible; /*makes the section symbol fully visible*/
+	text-align: center;
+	height: 0.25em; /*to make hr block height same as border-top height*/
+}
+hr:after {
+	background: var(--white); /*gives background color to content*/
+	content: "§"; /*section symbol*/
+	padding: 0 0.5em;
+	position: relative; /*positions content relative to hr element*/
+	top: -1em;
+}
+
+/* linear gradients */
 .linear-1 {
-   background-image: linear-gradient(to right, #fc466b, #3f5efb);
- }
- 
- .linear-2 {
-   background-image: linear-gradient(60deg, #03001e, #7303c0, #ec38bc, #fdeff9);
- }
- 
- .linear-3 {
-   background-image: linear-gradient(
-     #004ff9,
-     #004ff9 25%,
-     #fff94c 25%,
-     #fff94c 50%,
-     #004ff9 50%,
-     #004ff9 75%,
-     #fff94c 75%
-   );
- }
- 
- /* RADIAL */
- .radial-1 {
-   background-image: radial-gradient(farthest-corner, #ffa17f, #00223e);
- }
- 
- .radial-2 {
-   background-image: radial-gradient(ellipse at 25%, #c6ffdd, #fbd786);
- }
- 
- .radial-3 {
-   background-image: radial-gradient(circle, #12c2e9, #c471ed, #f64f59);
- }
- 
- /* CONIC */
- .conic-1 {
-   background-image: conic-gradient(#bc4e9c, #f80759);
- }
- 
- .conic-2 {
-   background-image: conic-gradient(from 45deg, #40e0d0, #ff8c00, #ff0080);
- }
- 
- .conic-3 {
-   background-image: conic-gradient(
-     yellow 45deg,
-     yellow 90deg,
-     green 90deg,
-     green 180deg,
-     blue 180deg,
-     blue 270deg,
-     purple 270deg,
-     purple 360deg
-   );
- }
- 
- /* PRESENTATIONAL STYLES */
- 
- body {
-   padding: 3rem;
- }
- 
- section {
-   display: grid;
-   gap: 25px;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
- }
- 
- div {
-   align-items: center;
-   border: 1px solid #ccc;
-   display: flex;
-   font-size: 1.5rem;
-   font-weight: 600;
-   justify-content: center;
-   height: 150px;
- }
- 
- hr {
-   margin: 35px 0 25px;
- }
- 
+	background-image: linear-gradient(to right, var(--red), var(--orange));
+}
+.linear-2 {
+	background-image: linear-gradient(
+		60deg,
+		var(--yellow),
+		var(--green),
+		var(--indigo),
+		var(--violet)
+	);
+}
+.linear-3 {
+	background-image: linear-gradient(
+		var(--red),
+		var(--red) 25%,
+		var(--orange) 25%,
+		var(--orange) 50%,
+		var(--red) 50%,
+		var(--red) 75%,
+		var(--orange) 75%
+	);
+}
+
+/* radial gradients */
+.radial-1 {
+	background-image: radial-gradient(
+		farthest-corner,
+		var(--yellow),
+		var(--green)
+	);
+}
+.radial-2 {
+	background-image: radial-gradient(
+		ellipse at 25%,
+		var(--indigo),
+		var(--violet)
+	);
+}
+.radial-3 {
+	background-image: radial-gradient(
+		circle,
+		var(--red),
+		var(--orange),
+		var(--yellow)
+	);
+}
+
+/* conic gradients */
+.conic-1 {
+	background-image: conic-gradient(var(--green), var(--indigo));
+}
+.conic-2 {
+	background-image: conic-gradient(
+		from 45deg,
+		var(--violet),
+		var(--red),
+		var(--orange)
+	);
+}
+.conic-3 {
+	background-image: conic-gradient(
+		var(--yellow) 45deg,
+		var(--yellow) 90deg,
+		var(--green) 90deg,
+		var(--green) 180deg,
+		var(--indigo) 180deg,
+		var(--indigo) 270deg,
+		var(--violet) 270deg,
+		var(--violet) 360deg
+	);
+}
+
+/* footer */
+footer {
+	text-align: center;
+	margin: 3em 0 0;
+	padding: 1em 0;
+}
+
+/* Tablet styles */
+/* max-width 768px */
+@media screen and (max-width: 768px) {
+	/* basic styles */
+	body {
+		padding: 1em;
+		max-width: 90%;
+	}
+	h1 {
+		padding: 0.25em;
+	}
+}
+
+/* Mobile styles */
+/* max-width 425px */
+@media screen and (max-width: 425px) {
+	/* basic styles */
+	body {
+		padding: 0.5em;
+		max-width: 100%;
+	}
+	h1 {
+    text-align: center;
+		margin-bottom: 0.5em;
+	}
+	h2 {
+		margin-bottom: 0.5em;
+		padding: 0.25em;
+	}
+	section {
+		gap: 1.25em;
+		grid-template-columns: 1fr;
+		padding: 1em;
+	}
+}
